@@ -2,9 +2,27 @@
     "name": "GateWay",
     "version": "1.0",
     "description": "Portal sucks",
-    "permissions": ["declarativeContent", "storage"],
+    "permissions": ["declarativeContent", "storage", "tabs"],
+    "commands": {
+      "open_page": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+L",
+          "mac": "Command+Shift+L"
+        },
+        "description": "Open preview"
+      }
+    },
+    "content_scripts": [{
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": [
+          "plugins/jquery-3.4.1.min.js",
+          "content.js"
+        ]
+    }],
     "background": {
-      "scripts": ["background.js"],
+      "scripts": ["plugins/jquery-3.4.1.min.js", "background.js"],
       "persistent": false
     },
     "browser_action": {
