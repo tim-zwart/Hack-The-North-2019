@@ -2,7 +2,7 @@
     "name": "GateWay",
     "version": "1.0",
     "description": "Portal sucks",
-    "permissions": ["declarativeContent", "storage", "tabs"],
+    "permissions": ["declarativeContent", "storage", "tabs", "activeTab"],
     "commands": {
       "open_page": {
         "suggested_key": {
@@ -18,8 +18,7 @@
         ],
         "js": [
           "plugins/jquery-3.4.1.min.js",
-          "content.js",
-          "core.js"
+          "content.js"
         ],
         "css": ["core.css"],
         "run_at": "document_end",
