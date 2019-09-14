@@ -18,22 +18,17 @@
         ],
         "js": [
           "plugins/jquery-3.4.1.min.js",
-          "content.js"
-        ]
+          "content.js",
+          "core.js"
+        ],
+        "css": ["core.css"],
+        "run_at": "document_end",
+        "all_frames": true
     }],
     "background": {
       "scripts": ["plugins/jquery-3.4.1.min.js", "background.js"],
       "persistent": false
     },
-    "content_scripts": [
-      {
-        "matches": ["https://*/*"],
-        "css": ["core.css"],
-        "js": ["core.js"],
-        "run_at": "document_end",
-        "all_frames": true
-      }
-    ],
     "browser_action": {
       "default_popup": "popup.html"
     },
